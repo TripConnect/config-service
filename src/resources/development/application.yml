@@ -1,0 +1,10 @@
+jwt-secret-key: shhhh
+database:
+  mysql:
+    host: localhost
+    username: service
+    password: user-service
+  postgres:
+    host: localhost
+    username: service
+    password: twofa-service

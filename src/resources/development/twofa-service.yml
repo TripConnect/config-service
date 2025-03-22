@@ -1,0 +1,4 @@
+server:
+  port: 31074
+authenticator:
+  issuer: TripConnect
