@@ -1,2 +1,5 @@
 server:
   port: 31072
+database:
+  mysql:
+    database: user-service
