@@ -11,9 +11,12 @@ import { ConfigResponseDto } from './dtos/config-response.dto';
 export class AppService {
 
   getConfigs(serviceName: ServiceName): ConfigResponseDto {
-    const globalCongifs = yaml.load(fs.readFileSync(path.join(__dirname, "./resources/development/application.yml"), "utf8")) as Record<string, any>;
-    const serviceConfigs = yaml.load(fs.readFileSync(path.join(__dirname, `./resources/development/${serviceName}.yml`), "utf8")) as Record<string, any>;
+    const environment = process.env.NODE_ENV || "local";
+    const globalCongifs = yaml.load(fs.readFileSync(path.join(__dirname, `./resources/${environment}/application.yml`), "utf8")) as Record<string, any>;
+    const serviceConfigs = yaml.load(fs.readFileSync(path.join(__dirname, `./resources/${environment}/${serviceName}.yml`), "utf8")) as Record<string, any>;
+
     const finalConfig = _.merge(globalCongifs, serviceConfigs);
+
     return new ConfigResponseDto(finalConfig);
   }
 }
