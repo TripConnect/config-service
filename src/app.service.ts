@@ -1,6 +1,7 @@
 const yaml = require('js-yaml');
 const fs = require('fs');
 const path = require('path');
+const _ = require('lodash');
 
 import { Injectable } from '@nestjs/common';
 import { ServiceName } from './enums/common';
@@ -12,9 +13,7 @@ export class AppService {
   getConfigs(serviceName: ServiceName): ConfigResponseDto {
     const globalCongifs = yaml.load(fs.readFileSync(path.join(__dirname, "./resources/development/application.yml"), "utf8")) as Record<string, any>;
     const serviceConfigs = yaml.load(fs.readFileSync(path.join(__dirname, `./resources/development/${serviceName}.yml`), "utf8")) as Record<string, any>;
-    return new ConfigResponseDto({
-      ...globalCongifs,
-      ...serviceConfigs
-    });
+    const finalConfig = _.merge(globalCongifs, serviceConfigs);
+    return new ConfigResponseDto(finalConfig);
   }
 }
