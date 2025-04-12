@@ -1,8 +1,0 @@
-jwt-secret-key: shhhh
-database:
-  mysql:
-    username: foo
-    password: bar
-  postgres:
-    username: foo
-    password: bar
