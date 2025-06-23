@@ -2,6 +2,7 @@ server:
   port: 31074
 authenticator:
   issuer: TripConnect
+  secret-length: 20
 database:
   postgres:
     database: twofa-service
