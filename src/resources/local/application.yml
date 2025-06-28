@@ -8,6 +8,12 @@ database:
     host: localhost
     username: service
     password: service
+  cassandra:
+    host: localhost
+    username: cassandra
+    password: tripconnect3107
+  elasticsearch:
+    host: localhost
 discovery:
   address: "localhost:31079"
 kafka:
