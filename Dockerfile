@@ -4,10 +4,12 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm install
+RUN npm install -g pnpm
+
+RUN pnpm install
 
 RUN npm run build
 
-CMD ["node", "dist/main"]
+CMD ["node", "dist/main.js"]
 
-EXPOSE 31070
+EXPOSE 31071
