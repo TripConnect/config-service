@@ -19,3 +19,5 @@ discovery:
 kafka:
   host: localhost
   port: 9092
+uuid:
+  namespace: 00000000-00000000-00000000-00000000

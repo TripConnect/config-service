@@ -5,13 +5,16 @@ import { ApiParam, ApiTags } from '@nestjs/swagger';
 import { ConfigResponseDto } from './dtos/config-response.dto';
 
 @ApiTags('config-controller')
-@Controller("/configs")
+@Controller('/configs')
 export class AppController {
-  constructor(private readonly appService: AppService) { }
+  constructor(private readonly appService: AppService) {}
 
-  @Get("/:serviceName")
+  @Get('/:serviceName')
   @ApiParam({ name: 'serviceName', enum: ServiceName, enumName: 'ServiceName' })
-  getConfigs(@Param('serviceName', new ParseEnumPipe(ServiceName)) serviceName: ServiceName): ConfigResponseDto {
+  getConfigs(
+    @Param('serviceName', new ParseEnumPipe(ServiceName))
+    serviceName: ServiceName,
+  ): ConfigResponseDto {
     return this.appService.getConfigs(serviceName);
   }
 }
