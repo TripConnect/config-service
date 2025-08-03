@@ -22,6 +22,6 @@ kafka:
   topic:
     user-fct-enabled-2fa: user-settings.twofa-service.fct.enabled-two.0.local
     chatting-sys-internal-pending-queue: chatting.chat-service.sys.pending-message.0.local
-    chatting-fct-new-message: chatting.chat-service.fct.sent-message.0.local
+    chatting-fct-sent-message: chatting.chat-service.fct.sent-message.0.local
 uuid:
   namespace: 00000000-00000000-00000000-00000000
