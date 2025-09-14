@@ -4,4 +4,5 @@ export enum ServiceName {
   USER_SERVICE = 'user-service',
   TWOFA_SERVICE = 'twofa-service',
   CHAT_SERVICE = 'chat-service',
+  LIVESTREAM_SERVICE = 'livestream-service',
 }
