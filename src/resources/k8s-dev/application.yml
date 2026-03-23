@@ -1,0 +1,27 @@
+jwt-secret-key: shhhh
+database:
+  mysql:
+    host: mysql
+    username: service
+    password: service
+  postgres:
+    host: postgres
+    username: service
+    password: service
+  cassandra:
+    host: cassandra
+    username: cassandra
+    password: tripconnect3107
+  elasticsearch:
+    host: elasticsearch
+discovery:
+  address: "localhost:31079"
+kafka:
+  host: kafka
+  port: 9092
+  topic:
+    user-fct-enabled-2fa: user-settings.twofa-service.fct.enabled-two.0.local
+    chatting-sys-internal-pending-queue: chatting.chat-service.sys.pending-message.0.local
+    chatting-fct-sent-message: chatting.chat-service.fct.sent-message.0.local
+uuid:
+  namespace: 00000000-00000000-00000000-00000000
