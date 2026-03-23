@@ -2,14 +2,15 @@ FROM node:20.18.1
 
 WORKDIR /app
 
-COPY . .
+COPY package.json pnpm-lock.yaml ./
 
 RUN npm install -g pnpm
+RUN pnpm install --frozen-lockfile
 
-RUN pnpm install
+COPY . .
 
-RUN npm run build
+RUN pnpm run build
+
+EXPOSE 31070
 
 CMD ["node", "dist/main.js"]
-
-EXPOSE 31071
