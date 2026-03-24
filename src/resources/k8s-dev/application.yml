@@ -1,9 +1,5 @@
 jwt-secret-key: shhhh
 database:
-  mysql:
-    host: mysql
-    username: service
-    password: service
   postgres:
     host: postgres
     username: service
