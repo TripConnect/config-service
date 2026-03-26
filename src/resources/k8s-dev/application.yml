@@ -21,3 +21,10 @@ kafka:
     chatting-fct-sent-message: chatting.chat-service.fct.sent-message.0.local
 uuid:
   namespace: 00000000-00000000-00000000-00000000
+service-contact:
+  user-service:
+    address: user-service:50051
+  chat-service:
+    address: chat-service:50051
+  payment-service:
+    address: payment-service:50051
