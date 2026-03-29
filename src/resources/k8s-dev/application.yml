@@ -27,4 +27,4 @@ service-contact:
   chat-service:
     address: chat-service:50051
   twofa-service:
-    address: chat-service:50051
+    address: twofa-service:50051
