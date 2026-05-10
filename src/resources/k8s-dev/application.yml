@@ -1,7 +1,7 @@
 jwt-secret-key: shhhh
 database:
   postgres:
-    host: postgres
+    host: postgres.infra.svc.cluster.local
     username: service
     password: service
   cassandra:
@@ -13,7 +13,7 @@ database:
 discovery:
   address: "localhost:31079"
 kafka:
-  host: kafka
+  host: kafka.infra.svc.cluster.local
   port: 9092
   topic:
     user-fct-enabled-2fa: user-settings.twofa-service.fct.enabled-two.0.local
